@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- Вы разрабатываете страницу для отображения информации о товаре. У вас есть объект product, который содержит информацию о товаре, включая название, цену и URL изображения товара. Вам необходимо отобразить эту информацию на странице с использованием v-bind. -->
+        <!-- Добавьте кнопку, которая будет изменять цену товара. При нажатии на кнопку должна генерироваться скидка на товар от 1 до 20% и обновиться цена товара в соответствии с значением скидки -->
+
+        <button @click="discountGenerator()">Изменить цену</button>
+        <div class="product">
+            <h2>{{ product.name }}</h2>
+            <p>{{ discountPrice }}</p>
+            <p><img :src="product.productLink" alt="product img"></p>
+        </div>
+
+        <!-- Вы разрабатываете простое приложение для отображения списка пользователей. У вас есть массив объектов users, где каждый объект представляет одного пользователя с его именем и возрастом. Вам необходимо отобразить каждого пользователя из массива в виде списка на странице. -->
+
+        <div class="users-list" v-for="{id, name, surname, age} in users" :key="id">
+            <p>{{ id }} -- {{ name }} {{ surname }} ({{ age }} age)</p>
+        </div>
+
+        <!-- Вы разрабатываете приложение для создания списка покупок. У вас есть массив объектов items, где каждый объект представляет товар с его названием и количеством. Вам необходимо отобразить список товаров, предоставить возможность изменять количество каждого товара и отмечать товары, которые уже куплены. -->
+
+        <div class="products">
+            <div class="product-item" v-for="item in items" :key="item.id">
+                <input type="checkbox" name="куплено" v-model="item.isBuy">
+                <input type="number" name="Ввести количество: " id="" v-model.number="item.quantity">
+                <span>{{ item.name }}</span>
+            </div>
+        </div>
+
+        <!-- Вы разрабатываете приложение для управления списком контактов. У вас есть форма с полями "Имя", "Фамилия" и "Email", где пользователь может вводить информацию о новом контакте. После добавления контакта он должен отображаться в списке контактов. Требуется связать форму с данными и отображать список контактов на странице. -->
+
+        <input type="text" name="Ввести имя: " id="" v-model="newUser.name">
+        <input type="text" name="Ввести фамилию: " id="" v-model="newUser.surname">
+        <input type="number" name="Ввести возраст: " id="" v-model.number="newUser.age">
+        <button @click="addUser()">Добавить пользователя</button>
+
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                newUser: {
+                    id: 0,
+                    name: '',
+                    surname: '',
+                    age: 0
+                },
+                discount: 0,
+                product: {
+                    name: 'Поп-ит радужный',
+                    price: 500,
+                    productLink: 'https://ollislimers.ru/image/cache/catalog/cat/podarki/pop-it-3-800x800.jpg'
+                },
+                users: [
+                    {
+                        id: 1,
+                        name: 'Lea',
+                        surname: 'Clover',
+                        age: 30
+                    },
+                    {
+                        id: 2,
+                        name: 'James',
+                        surname: 'Bond',
+                        age: 50
+                    },
+                    {
+                        id: 3,
+                        name: 'Jane',
+                        surname: 'Dow',
+                        age: 33
+                    },
+                    {
+                        id: 4,
+                        name: 'Sky',
+                        surname: 'Fox',
+                        age: 25
+                    },
+                    {
+                        id: 5,
+                        name: 'Freddy',
+                        surname: 'Fish',
+                        age: 27
+                    }
+                ],
+                items: [
+                    {
+                        id: 1,
+                        name: 'Juice',
+                        quantity: 2,
+                        isBuy: false
+                    },
+                    {
+                        id: 2,
+                        name: 'Milk',
+                        quantity: 1,
+                        isBuy: false
+                    },
+                    {
+                        id: 3,
+                        name: 'Coca-Cola',
+                        quantity: 5,
+                        isBuy: false
+                    },
+                    {
+                        id: 4,
+                        name: 'Twix',
+                        quantity: 2,
+                        isBuy: false
+                    },
+                    {
+                        id: 5,
+                        name: 'Cake',
+                        quantity: 1,
+                        isBuy: false
+                    }
+                ]
+            },
+            methods: {
+                discountGenerator() {
+                    this.discount = Math.floor(Math.random() * 20);
+                },
+                addUser() {
+                    this.newUser.id = Date.now();
+                    this.users.push(
+                        {
+                            ...this.newUser
+                        }
+                    );
+                    this.newUser = {
+                        id: 0,
+                        name: '',
+                        surname: '',
+                        age: 0
+                    }
+                }
+            },
+            computed: {
+                discountPrice() {
+                    return this.product.price - this.product.price * this.discount / 100;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
