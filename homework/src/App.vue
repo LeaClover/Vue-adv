@@ -2,20 +2,7 @@
   <div id="app">
     <div class="center">
       <CompHeader />
-      <div class="main-content">
-        <div class="main-content__text-block">
-          <h2 class="main-content__heading">Let Your Home Be Unique</h2>
-          <p class="main-content__text">There are many variations of the passages of lorem Ipsum
-            fromavailable,
-            majority.</p>
-          <button class="main-content__button">Get Started<svg class="main-content__arrow" width="18" height="17"
-              viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887" stroke="#CDA274"
-                stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
-            </svg>
-          </button>
-        </div>
-      </div>
+      <CompMainContent />
       <div class="projects">
         <div class="projects__text-block">
           <h3 class="projects__heading">Follow Our Projects</h3>
@@ -89,35 +76,7 @@
           </div>
         </div>
       </div>
-      <div class="achievements">
-        <div class="achievements__text-block">
-          <div class="achievements__item">
-            <h1 class="achievements__heading">12</h1>
-            <p class="achievements__text">Years Of Experiance</p>
-          </div>
-          <svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274" />
-          </svg>
-          <div class="achievements__item">
-            <h1 class="achievements__heading">85</h1>
-            <p class="achievements__text">Success Project</p>
-          </div>
-          <svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274" />
-          </svg>
-          <div class="achievements__item">
-            <h1 class="achievements__heading">15</h1>
-            <p class="achievements__text">Active Project</p>
-          </div>
-          <svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274" />
-          </svg>
-          <div class="achievements__item">
-            <h1 class="achievements__heading">95</h1>
-            <p class="achievements__text">Happy Customers</p>
-          </div>
-        </div>
-      </div>
+      <CompAchievements />
       <div class="articles">
         <div class="articles__text-block">
           <h3 class="articles__heading">Articles & News</h3>
@@ -136,6 +95,8 @@
 <script>
 import CompHeader from './components/CompHeader.vue'
 import CompFooter from './components/CompFooter.vue'
+import CompMainContent from './components/CompMainContent.vue'
+import CompAchievements from './components/CompAchievements.vue'
 import CompProject from './components/CompProject.vue'
 
 export default {
@@ -143,6 +104,8 @@ export default {
   components: {
     CompHeader,
     CompFooter,
+    CompMainContent,
+    CompAchievements,
     CompProject
   },
   data: function () {
@@ -196,9 +159,6 @@ export default {
   computed: {
     shortListProjects () {
       return this.projects.slice(0, 3)
-    },
-    imgUrl () {
-      return require(`@/assets/${this.project.image}`)
     }
   }
 }
@@ -225,66 +185,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.main-content {
-  background: url(assets/main-photo.jpg);
-  background-repeat: no-repeat;
-  max-width: 1150px;
-  width: 100%;
-  min-height: 100%;
-  padding-top: 208px;
-  padding-bottom: 208px;
-  padding-left: 52px;
-  border-radius: 50px;
-
-  &__heading {
-    color: #292F36;
-    font-family: 'DM Serif Display', serif;
-    font-size: 65px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%;
-    max-width: 434px;
-    margin-bottom: 18px;
-  }
-
-  &__text {
-    color: #4D5053;
-    font-family: 'Jost';
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: 0.22px;
-    max-width: 434px;
-    margin-bottom: 21px;
-  }
-
-  &__button {
-    color: #FFF;
-    text-align: center;
-    font-family: 'Jost';
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 125%;
-    letter-spacing: 0.36px;
-    border: none;
-    border-radius: 18px;
-    background: #292F36;
-    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
-    display: flex;
-    padding: 26px 49px 26px 48px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  &__arrow {
-    fill: #CDA274;
-  }
 }
 
 .projects {
@@ -408,57 +308,6 @@ a {
       border: none;
       border-radius: 50px;
     }
-  }
-}
-
-.achievements {
-  background-color: #F4F0EC;
-  margin-top: 100px;
-  margin-bottom: 96px;
-  padding-top: 151px;
-  padding-bottom: 151px;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-
-  &__text-block {
-    display: flex;
-    align-items: center;
-    gap: 76px;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-  }
-
-  &__heading {
-    color: #CDA274;
-    font-family: 'DM Serif Display', serif;
-    font-size: 85px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%;
-    letter-spacing: 1.7px;
-  }
-
-  &__text {
-    color: #4D5053;
-    font-family: 'Jost';
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: 0.22px;
   }
 }
 

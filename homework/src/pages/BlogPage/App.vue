@@ -35,7 +35,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="articles__blog">
                 <div class="articles__text-block">
@@ -149,9 +148,6 @@ export default {
   computed: {
     shortListProjects () {
       return this.projects.slice(0, 3)
-    },
-    imgUrl () {
-      return require(`@/assets/${this.project.image}`)
     }
   }
 }
@@ -178,6 +174,63 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.banner {
+    background: url(../../assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100vw;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    &__2 {
+        background: url(../../assets/banner2.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 351px;
+        width: 100vw;
+        margin-bottom: 200px;
+    }
+
+    &__textblock {
+        margin-top: 178px;
+        padding-top: 41px;
+        padding-bottom: 41px;
+        background-color: #fff;
+        display: flex;
+        max-width: 503px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 50px 50px 0px 0px;
+    }
+
+    &__heading {
+        color: #292F36;
+        font-family: 'DM Serif Display', serif;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+    }
+
+    &__text {
+        color: #4D5053;
+        font-family: 'Jost';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.22px;
+    }
 }
 
 .projects {
@@ -481,63 +534,6 @@ a {
         text-transform: capitalize;
         left: 17px;
         top: 15px;
-    }
-}
-
-.banner {
-    background: url(../../assets/banner.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    width: 100vw;
-    margin-bottom: 200px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
-    &__2 {
-        background: url(../../assets/banner2.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 351px;
-        width: 100vw;
-        margin-bottom: 200px;
-    }
-
-    &__textblock {
-        margin-top: 178px;
-        padding-top: 41px;
-        padding-bottom: 41px;
-        background-color: #fff;
-        display: flex;
-        max-width: 503px;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        border-radius: 50px 50px 0px 0px;
-    }
-
-    &__heading {
-        color: #292F36;
-        font-family: 'DM Serif Display', serif;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 125%;
-    }
-
-    &__text {
-        color: #4D5053;
-        font-family: 'Jost';
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-        letter-spacing: 0.22px;
     }
 }
 
