@@ -24,8 +24,8 @@
         <div class="footer__block-pages">
             <h4 class="footer__heading">Pages</h4>
             <a class="footer__link" href="index.html">Home</a>
-            <a class="footer__link" href="#">Project</a>
-            <a class="footer__link" href="blog.html">Blog</a>
+            <a class="footer__link" href="projectdetails.html">Project</a>
+            <a class="footer__link" href="blogdetails.html">Blog</a>
         </div>
         <div class="footer__block-empty"></div>
         <div class="footer__block-contact">

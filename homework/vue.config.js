@@ -28,6 +28,12 @@ module.exports = {
       tamplate: 'public/index.html',
       title: 'Project',
       chunks: ['chunk-vendors', 'chunk-common', 'project']
+    },
+    projectdetails: {
+      entry: './src/pages/ProjectDetails/main.js',
+      tamplate: 'public/index.html',
+      title: 'Project-Details',
+      chunks: ['chunk-vendors', 'chunk-common', 'projectdetails']
     }
   }
 }
