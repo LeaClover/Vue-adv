@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="blogdetails">
         <div class="center">
             <CompHeader />
             <div class="banner__2">
@@ -11,12 +11,12 @@
 </template>
 
 <script>
-import CompHeader from '../../components/CompHeader.vue'
-import CompFooter from '../../components/CompFooter.vue'
-import CompArticles from '../../components/CompArticles.vue'
+import CompHeader from '../components/CompHeader.vue'
+import CompFooter from '../components/CompFooter.vue'
+import CompArticles from '../components/CompArticles.vue'
 
 export default {
-  name: 'App',
+  name: 'BlogDetails',
   components: {
     CompHeader,
     CompFooter,
@@ -29,8 +29,8 @@ export default {
           id: 1,
           heading1: 'Let’s Get Solution for Building Construction Work',
           heading2: 'Design sprints are great',
-          img1: require('../../assets/article1.jpg'),
-          img2: require('../../assets/article1-2.jpg'),
+          img1: require('../assets/article1.jpg'),
+          img2: require('../assets/article1-2.jpg'),
           tag: 'Kitchen',
           date: '26 December,2022',
           path: 'Interior / Home / Decore',
@@ -43,8 +43,8 @@ export default {
           id: 2,
           heading1: 'Low Cost Latest Invented Interior Designing Ideas',
           heading2: 'Design sprints are great',
-          img1: require('../../assets/photo-bed.jpg'),
-          img2: require('../../assets/main-photo.jpg'),
+          img1: require('../assets/photo-bed.jpg'),
+          img2: require('../assets/main-photo.jpg'),
           tag: 'Bedroom',
           date: '22 December,2022',
           path: 'Interior / Home / Decore',
@@ -57,8 +57,8 @@ export default {
           id: 3,
           heading1: 'Best For Any Office & Business Interior Solution',
           heading2: 'Design sprints are great',
-          img1: require('../../assets/item1.jpg'),
-          img2: require('../../assets/project1.jpg'),
+          img1: require('../assets/item1.jpg'),
+          img2: require('../assets/project1.jpg'),
           tag: 'K-Planning',
           date: '25 December,2022',
           path: 'Interior / Home / Decore',
@@ -71,8 +71,8 @@ export default {
           id: 4,
           heading1: 'Let’s Get Solution for Building Construction Work',
           heading2: 'Design sprints are great',
-          img1: require('../../assets/item6.jpg'),
-          img2: require('../../assets/project4.jpg'),
+          img1: require('../assets/item6.jpg'),
+          img2: require('../assets/project4.jpg'),
           tag: 'Building',
           date: '26 December,2022',
           path: 'Interior / Home / Decore',
@@ -85,8 +85,8 @@ export default {
           id: 5,
           heading1: 'Low Cost Latest Invented Interior Designing Ideas',
           heading2: 'Design sprints are great',
-          img1: require('../../assets/item2.jpg'),
-          img2: require('../../assets/latestpost.jpg'),
+          img1: require('../assets/item2.jpg'),
+          img2: require('../assets/latestpost.jpg'),
           tag: 'Architecture',
           date: '22 December,2022',
           path: 'Interior / Home / Decore',
@@ -99,8 +99,8 @@ export default {
           id: 6,
           heading1: 'Best For Any Office & Business Interior Solution',
           heading2: 'Design sprints are great',
-          img1: require('../../assets/item3.jpg'),
-          img2: require('../../assets/project2.jpg'),
+          img1: require('../assets/item3.jpg'),
+          img2: require('../assets/project2.jpg'),
           tag: 'Bathroom',
           date: '25 December,2022',
           path: 'Interior / Home / Decore',
@@ -113,8 +113,8 @@ export default {
           id: 7,
           heading1: 'Let’s Get Solution for Building Construction Work',
           heading2: 'Design sprints are great',
-          img1: require('../../assets/project3.jpg'),
-          img2: require('../../assets/project1.jpg'),
+          img1: require('../assets/project3.jpg'),
+          img2: require('../assets/project1.jpg'),
           tag: 'K-Planning',
           date: '26 December,2022',
           path: 'Interior / Home / Decore',
@@ -127,8 +127,8 @@ export default {
           id: 8,
           heading1: 'Low Cost Latest Invented Interior Designing Ideas',
           heading2: 'Design sprints are great',
-          img1: require('../../assets/photo-bed2.jpg'),
-          img2: require('../../assets/photo-bed.jpg'),
+          img1: require('../assets/photo-bed2.jpg'),
+          img2: require('../assets/photo-bed.jpg'),
           tag: 'Bedroom',
           date: '22 December,2022',
           path: 'Interior / Home / Decore',
@@ -172,7 +172,7 @@ a {
 }
 
 .banner {
-    background: url(../../assets/banner.jpg);
+    background: url(../assets/banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
@@ -186,7 +186,7 @@ a {
     align-items: center;
 
     &__2 {
-        background: url(../../assets/banner2.jpg);
+        background: url(../assets/banner2.jpg);
         background-repeat: no-repeat;
         background-position: center;
         height: 351px;
@@ -651,7 +651,6 @@ a {
         counter-increment: my-counter;
         color: #CDA274;
         margin-right: 14px;
-        font-family: DM Serif Display;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;

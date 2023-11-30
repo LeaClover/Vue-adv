@@ -23,17 +23,16 @@
         </div>
         <div class="footer__block-pages">
             <h4 class="footer__heading">Pages</h4>
-            <a class="footer__link" href="index.html">Home</a>
-            <a class="footer__link" href="projectdetails.html">Project</a>
-            <a class="footer__link" href="blogdetails.html">Blog</a>
+            <router-link class="footer__link" to="/">Home</router-link>
+            <router-link class="footer__link" to="/project-details">Project</router-link>
+            <router-link class="footer__link" to="/blog-details">Blog</router-link>
         </div>
         <div class="footer__block-empty"></div>
         <div class="footer__block-contact">
             <h4 class="footer__heading">Contact</h4>
             <div class="footer__contacts">
                 <p class="footer__contact">55 East Birchwood Ave. Brooklyn, New York 11201</p>
-                <p class="footer__contact">contact@interno.com
-                </p>
+                <p class="footer__contact">contact@interno.com</p>
                 <p class="footer__contact">(123) 456 - 7890</p>
             </div>
         </div>

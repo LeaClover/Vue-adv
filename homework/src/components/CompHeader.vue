@@ -7,9 +7,9 @@
       <h3 class="header__text-logo">Interno</h3>
     </div>
     <div class="header__right-items">
-      <a class="header__link" href="index.html">Home</a>
-      <a class="header__link" href="project.html">Project</a>
-      <a class="header__link" href="blog.html">Blog</a>
+      <router-link class="header__link" to="/">Home</router-link>
+      <router-link class="header__link" to="/project">Project</router-link>
+      <router-link class="header__link" to="/blog">Blog</router-link>
     </div>
   </div>
 </template>

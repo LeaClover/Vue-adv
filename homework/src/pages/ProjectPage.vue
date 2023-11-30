@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="projectpage">
         <div class="center">
             <CompHeader />
             <div class="banner__3">
@@ -40,13 +40,13 @@
 </template>
 
 <script>
-import CompHeader from '../../components/CompHeader.vue'
-import CompFooter from '../../components/CompFooter.vue'
+import CompHeader from '../components/CompHeader.vue'
+import CompFooter from '../components/CompFooter.vue'
 // import CompBanner from '../../components/CompBanner.vue'
-import CompProjectPage from '../../components/CompProjectPage.vue'
+import CompProjectPage from '../components/CompProjectPage.vue'
 
 export default {
-  name: 'App',
+  name: 'ProjectPage',
   components: {
     CompHeader,
     CompFooter,
@@ -79,7 +79,7 @@ a {
 }
 
 .banner {
-    background: url(../../assets/banner.jpg);
+    background: url(../assets/banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
@@ -93,7 +93,7 @@ a {
     align-items: center;
 
     &__2 {
-        background: url(../../assets/banner2.jpg);
+        background: url(../assets/banner2.jpg);
         background-repeat: no-repeat;
         background-position: center;
         height: 351px;
@@ -106,7 +106,7 @@ a {
     }
 
     &__3 {
-        background: url(../../assets/banner3.jpg);
+        background: url(../assets/banner3.jpg);
         background-repeat: no-repeat;
         background-position: center;
         height: 351px;

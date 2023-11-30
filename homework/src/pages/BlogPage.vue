@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="blogpage">
         <div class="center">
             <CompHeader />
             <div class="banner">
@@ -12,7 +12,7 @@
                 <div class="latest-post__conteiner">
                     <h2 class="latest-post__main-heading">Latest Post</h2>
                     <div class="latest-post__post-block">
-                        <img src="../../assets/latestpost.jpg" alt="latestpost photo">
+                        <img src="../assets/latestpost.jpg" alt="latestpost photo">
                         <div class="latest-post__textblock">
                             <h4 class="latest-post__heading">Low Cost Latest Invented Interior Designing Ideas</h4>
                             <p class="latest-post__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -88,11 +88,11 @@
 </template>
 
 <script>
-import CompHeader from '../../components/CompHeader.vue'
-import CompFooter from '../../components/CompFooter.vue'
+import CompHeader from '../components/CompHeader.vue'
+import CompFooter from '../components/CompFooter.vue'
 
 export default {
-  name: 'App',
+  name: 'BlogPage',
   components: {
     CompHeader,
     CompFooter
@@ -102,42 +102,42 @@ export default {
       projects: [
         {
           id: 1,
-          image: require('../../assets/item1.jpg'),
+          image: require('../assets/item1.jpg'),
           room: 'Kitchen Design',
           heading: 'Let’s Get Solution For Building Construction Work',
           date: '26 December,2022'
         },
         {
           id: 2,
-          image: require('../../assets/item2.jpg'),
+          image: require('../assets/item2.jpg'),
           room: 'Living Design',
           heading: 'Low Cost Latest Invented Interior Designing Ideas',
           date: '22 December,2022'
         },
         {
           id: 3,
-          image: require('../../assets/item3.jpg'),
+          image: require('../assets/item3.jpg'),
           room: 'Interior Design',
           heading: 'Best For Any Office & Business Interior Solution',
           date: '25 December,2022'
         },
         {
           id: 4,
-          image: require('../../assets/item4.jpg'),
+          image: require('../assets/item4.jpg'),
           room: 'Kitchen Design',
           heading: 'Let’s Get Solution For Building Construction Work',
           date: '26 December,2022'
         },
         {
           id: 5,
-          image: require('../../assets/item5.jpg'),
+          image: require('../assets/item5.jpg'),
           room: 'Living Design',
           heading: 'Low Cost Latest Invented Interior Designing Ideas',
           date: '22 December,2022'
         },
         {
           id: 6,
-          image: require('../../assets/item6.jpg'),
+          image: require('../assets/item6.jpg'),
           room: 'Interior Design',
           heading: 'Best For Any Office & Business Interior Solution',
           date: '25 December,2022'
@@ -177,7 +177,7 @@ a {
 }
 
 .banner {
-    background: url(../../assets/banner.jpg);
+    background: url(../assets/banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
@@ -191,7 +191,7 @@ a {
     align-items: center;
 
     &__2 {
-        background: url(../../assets/banner2.jpg);
+        background: url(../assets/banner2.jpg);
         background-repeat: no-repeat;
         background-position: center;
         height: 351px;
@@ -609,7 +609,7 @@ a {
 
     &__date {
         color: #4D5053;
-        font-family: Jost;
+        font-family: 'Jost';
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
